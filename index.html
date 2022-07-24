@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        body{
+            background-color: teal;
+        }
+
+        section{
+            display: flex;
+            border: 0.5px solid blanchedalmond;
+            width: 220px;
+            height: 200px;
+            margin: 50px auto auto auto;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        [class^=dado-]{
+            display: flex;
+            height: 50px;
+            width: 50px;
+            background-color: cyan;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .bolita{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 1px;
+        }
+
+        .dado-1{
+            justify-content: center;
+            align-items: center;
+
+            animation: domingo-1 2s alternate infinite cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+
+        .dado-2{
+            justify-content: space-between;
+            animation: domingo-2 2s alternate infinite cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .dado-2 .bolita:nth-of-type(2){
+            align-self: flex-end;
+        }
+
+        .dado-3{
+            justify-content: space-between;
+            animation: domingo-1 2s alternate infinite cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .dado-3 .bolita:nth-of-type(2){
+            align-self: center;
+        }
+
+        .dado-3 .bolita:nth-of-type(3){
+            align-self: flex-end;
+        }
+
+        .dado-4{
+            justify-content: space-between;
+            animation: domingo-2 2s alternate infinite cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        .dado-4 .bolita2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .dado-5{
+                justify-content: space-around;
+                animation: domingo-2 2s alternate infinite cubic-bezier(0.64, 0, 0.78, 0);
+        }
+
+        .dado-5 .bolita2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .dado-5 .bolita{
+            align-self: center;
+        }
+
+        .dado-6{
+                justify-content: space-around;
+                animation: domingo-1 2s alternate infinite cubic-bezier(0.37, 0, 0.63, 1);
+        }
+        
+
+        .dado-6 .bolita2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        @keyframes domingo-1 {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+
+        @keyframes domingo-2 {
+            from{transform: rotate(0deg);}
+            to{transform: rotate(-360deg);}
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <div class="dado-1" >
+            <div class="bolita" ></div>
+        </div>
+
+        <div class="dado-2">
+            <div class="bolita" ></div>
+            <div class="bolita" ></div>
+        </div>
+
+        <div class="dado-3">
+            <div class="bolita" ></div>
+            <div class="bolita" ></div>
+            <div class="bolita" ></div>
+        </div>
+
+        <div class="dado-4">
+            <div class="bolita2" >
+                <div class="bolita" ></div>
+                <div class="bolita" ></div>
+            </div>
+            <div class="bolita2" >
+                <div class="bolita" ></div>
+                <div class="bolita" ></div>
+            </div>
+        </div>
+
+        <div class="dado-5">
+            <div class="bolita2" >
+                <div class="bolita" ></div>
+                <div class="bolita" ></div>
+            </div>
+
+            <div class="bolita" ></div>
+
+            <div class="bolita2" >
+                <div class="bolita" ></div>
+                <div class="bolita" ></div>
+            </div>
+        </div>
+
+        <div class="dado-6">
+            <div class="bolita2">
+                <div class="bolita"></div>
+                <div class="bolita"></div>
+            </div>
+            <div class="bolita2">
+                <div class="bolita"></div>
+                <div class="bolita"></div>
+            </div>
+            <div class="bolita2">
+                <div class="bolita"></div>
+                <div class="bolita"></div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
